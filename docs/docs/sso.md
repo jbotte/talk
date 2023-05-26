@@ -37,7 +37,7 @@ You will then have to generate a JWT with the following claims:
   presented inside Coral to moderators and other users. There are no username validations or restrictions enforced by Coral when you're using SSO.
 - `user.badges` _(optional)_ - array of strings to be displayed as badges beside
   username inside Coral, visible to other users and moderators. For example, to indicate
-  a user's subscription status. If you include the claim, but you are not passing a badge value, then use an empty array instead of null.
+  a user's subscription status. If you include the claim, but you are not passing a badge value, then use an empty array instead of null. Requires iat field to function properly.
 - `user.role` _(optional)_ - one of "COMMENTER", "STAFF", "MODERATOR", "ADMIN". Will create/update
   Coral user with this permission level. When users have both an assigned role greather than COMMENTER and a badge, both will be displayed.
 - `user.url` _(optional)_ - url for user account management, where a user will
